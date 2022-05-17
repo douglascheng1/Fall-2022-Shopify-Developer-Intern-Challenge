@@ -69,11 +69,13 @@ function onDelete(td) {
     const input = prompt("Reason for deletion: ");
     console.log("User deleted item: '"+ formData["itemName"] +"' due to: "+ input);
 
-    row = td.parentElement.parentElement;
-    document.getElementById("inventoryList").deleteRow(row.rowIndex);
     if (confirm("Item Removed Successfully. Undo Delete?")) {
-        updateRecord(formData);
         console.log("User undeleted item: '"+ formData["itemName"]+"'");
     }
+    else{
+      row = td.parentElement.parentElement;
+      document.getElementById("inventoryList").deleteRow(row.rowIndex);     
+    }
+  
   resetForm();
 }
