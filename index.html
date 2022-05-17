@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        JavaScript CRUD Example Tutorial
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<h1><center>JavaScript CRUD Example Tutorial</center></h1>
+	<hr>
+			<div class="inventory-form">
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>Item Name*</label>
+                        <input type="text" name="itemName" id="itemName">
+                    </div>
+                    <div>
+                        <label>Supplier</label>
+                        <input type="text" name="supplier" id="supplier">
+                    </div>
+                    <div>
+                        <label>Quantity</label>
+                        <input type="text" name="quantity" id="quantity">
+                    </div>
+                    <div>
+                        <label>Location</label>
+                        <input type="text" name="location" id="location">
+                    </div>
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+		</div>
+		<br/>
+		<div class = "inventory-table">
+                <table class="list" id="inventoryList">
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Supplier</th>
+                            <th>Quantity</th>
+                            <th>Location</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
